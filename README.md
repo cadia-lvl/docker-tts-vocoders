@@ -34,13 +34,22 @@ $ git clone https://github.com/cadia-lvl/docker-tts-vocoders.git
 
 # Running
 
-1. Store speech files (wav) in the src directory
+1. Create a folder called ./src and store speech files (wav) in the src directory
 
 ```
+$ mkdir ./src
+
 $ cd ./src/
 ```
 
-2. Build the Dockerfile
+2. Create a folder called ./ppr for later use
+
+
+```
+$ mkdir ./ppr
+```
+
+3. Build the Dockerfile
 
 ```
 $ docker build -t <name>:<tag> .
@@ -51,15 +60,15 @@ $ docker build -t <name>:<tag> .
 
 Example : straight:v1
 
-3, Run the Dockerfile
+4. Run the Dockerfile
 
 ```
 docker run -it -d -v ${PWD}/src:/mcr/exe/src -v ${PWD}/ppr:/mcr/exe/ppr <name>:<tag> /bin/bash run.sh
 ```
 
-Use the same ´<name>:<tag>´ in step 4
+Use the same `<name>:<tag>` in step 4
 
-6. The synthesized output are stored in the ./ppr folder 
+5. The synthesized output are stored in the ./ppr folder 
 
 ```
 $ cd ./ppr/
