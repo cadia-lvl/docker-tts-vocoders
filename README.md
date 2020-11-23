@@ -57,7 +57,7 @@ Example : straight:v1
 docker run -it -d -v ${PWD}/src:/mcr/exe/src -v ${PWD}/ppr:/mcr/exe/ppr <name>:<tag> /bin/bash run.sh
 ```
 
-Use the same <name>:<tag> in step 4
+Use the same ´<name>:<tag>´ in step 4
 
 6. The synthesized output are stored in the ./ppr folder 
 
